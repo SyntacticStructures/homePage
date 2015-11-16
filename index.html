@@ -119,11 +119,11 @@
             } 
         }
         if(scroll[1] >= 1590 && scroll[1]) {
-            var xx = parseFloat($('#webPic').css("opacity")) + .008
+            var xx = parseFloat($('#webPic').css("opacity")) + .0095555555
             console.log("lksjgoioihgroihgoirgh", xx);
             $('#webPic').css("opacity", xx)
         } else if (scroll[1] < 1590 && scroll[1] > 1126) {
-            var xx = parseFloat($('#webPic').css("opacity")) - .008
+            var xx = parseFloat($('#webPic').css("opacity")) - .0095
             console.log("lksjgoioihgroihgoirgh", xx);
             $('#webPic').css("opacity", xx)
         }
@@ -158,6 +158,9 @@
         if (scroll[1] < 390) {
             $('#mePic').css("position", "fixed");
             $('#mePic').css("top", 442);
+            $('#webPic').css("top", 442);
+            $('#iOS').css("top", 442);
+
             if (scroll[1] >= 300 && scroll[1] < 390) {
                 console.log("we are here")
             }
@@ -207,13 +210,13 @@
   </div>
   <div class= "imgRow">
         <div class="imgWrapper">
-            <img id="webPic" src="./assets/web.png" width="200" height="auto">
+            <img id="webPic" src="./assets/web.png" width="150" height="auto">
         </div>
         <div class="imgWrapper">
-            <img id="mePic" src="./assets/mePic.png" width="200" height="auto">
+            <img id="mePic" src="./assets/mePic.png" width="150" height="auto">
         </div>
         <div class="imgWrapper">
-            <img id="iOS" src="./assets/ios.png" width="200" height="auto">
+            <img id="iOS" src="./assets/ios.png" width="150" height="auto">
         </div>
   </div>
   <h2 id="subTitle">poop</h2>

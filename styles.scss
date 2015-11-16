@@ -78,33 +78,40 @@
     }
     .imgWrapper {
     	display: inline-block;
-    	width: 200px;
-    	height: 200px;
+    	width: 150px;
+    	height: auto;
+        text-align: center;
     }
     #iOS {
     	z-index: 100000;
     	position: fixed;
+        cursor: pointer; cursor: hand;
     }
     #mePic{
     	/*margin-left: 200px;*/
     	/*margin-top: 50px;*/
+        // margin-top: 20px;
     	z-index: 100000;
     	position: fixed;
+        cursor: pointer; cursor: hand;
     }
     #webPic{
+        // width: 100;
     	z-index: 100000;
     	/*it's not quite centered wihout margin*/
-    	margin-left: 3px;
+    	// margin-left: 3px;
     	position: fixed;
+        cursor: pointer; cursor: hand;
     }
     .imgRow {
     	/*position: fixed;*/
     	display: block;
-    	/*text-align: center;*/
-    	width: 610px;
+    	text-align: left;
+    	width: 620px;
     	height: 500px;
     	margin: 0 auto;
-    	margin-top: 10px;
+        vertical-align: baseline;
+    	// margin-top: 10px;
     	/*border: 1px solid green;*/
     }
     .subtitle {
