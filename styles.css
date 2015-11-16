@@ -1,78 +1,217 @@
-/*
-Error: Undefined mixin 'lilGuys'.
-        on line 124 of styles.scss, in `lilGuys'
-        from line 124 of styles.scss
+* {
+  margin: 0;
+  padding: 0; }
 
-119:     	margin-top: 40px;
-120:     	border-radius: 10px;
-121:   		background-color: rgba(255,104,1,0.9);
-122:     }
-123:     @media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
-124:     	@include lilGuys();
-125: 	}
-126:     @media (min-width:480px) {
-127:       @include lilGuys()
-128:     }
-129: 
+@font-face {
+  font-family: "Anson";
+  src: url("./assets/Anson-Regular.otf") format("opentype"); }
+/*@font-face { font-family: Anson; font-weight: bold; src: url('Anson-Regular.otf');}*/
+body {
+  font-size: 20px;
+  color: white;
+  /*text-shadow: 0 1px 0 black, 0 0 5px black;*/
+  background-attachment: fixed;
+  /*background-position: 0 200px;*/
+  background-image: url("./assets/seattle-870282_1920.jpg");
+  background-repeat: no-repeat;
+  /*height: 10000px;*/
+  position: relative; }
 
-Backtrace:
-styles.scss:124:in `lilGuys'
-styles.scss:124
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:338:in `block in visit_mixin'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/stack.rb:98:in `block in with_mixin'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/stack.rb:98:in `with_mixin'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:336:in `visit_mixin'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `map'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:502:in `visit_media'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `map'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:157:in `visit'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/engine.rb:368:in `_render_with_sourcemap'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/engine.rb:285:in `render_with_sourcemap'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:209:in `each'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:328:in `block in watch'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/vendor/listen/lib/listen/listener.rb:252:in `call'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/vendor/listen/lib/listen/adapter.rb:254:in `call'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/vendor/listen/lib/listen/adapter.rb:254:in `report_changes'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/vendor/listen/lib/listen/adapter.rb:323:in `poll_changed_directories'
-/Users/Computer/.rvm/gems/ruby-2.2.1/gems/sass-3.4.9/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Undefined mixin 'lilGuys'.\A         on line 124 of styles.scss, in `lilGuys'\A         from line 124 of styles.scss\A \A 119:     	margin-top: 40px;\A 120:     	border-radius: 10px;\A 121:   		background-color: rgba(255,104,1,0.9);\A 122:     }\A 123:     @media only screen and (min-device-width : 320px) and (max-device-width : 568px) {\A 124:     	@include lilGuys();\A 125: 	}\A 126:     @media (min-width:480px) {\A 127:       @include lilGuys()\A 128:     }\A 129: "; }
+p {
+  padding: 0 0.5em;
+  margin: 0; }
+
+#subTitle {
+  margin: 0 auto;
+  width: 200px;
+  margin-top: 100px;
+  display: none;
+  text-align: center;
+  font-family: Anson;
+  font-size: 3em; }
+
+.content {
+  /*background-position: 50% 0;*/
+  background-repeat: no-repeat;
+  height: 500px;
+  position: relative; }
+
+#content1 {
+  background-image: url("http://www.solidbackgrounds.com/images/2880x1800/2880x1800-safety-orange-blaze-orange-solid-color-background.jpg");
+  /*background-position: 50% 0;*/
+  background-attachment: fixed;
+  height: 1000px; }
+
+#content3 {
+  background-color: rgba(0, 0, 0, 0.5);
+  background-attachment: fixed;
+  /*        width: 90%;
+          margin: 0 auto;
+          height: 1000px;*/
+  height: 800px; }
+
+#content2 {
+  /*background-image: url("./assets/seattle-870282_1920.jpg");*/
+  /*background-color: rgba(0,0,0,0.8);*/
+  height: 620px;
+  /*background-position: 50% 0;*/
+  background-attachment: fixed; }
+
+#content4 {
+  /*background-image: url("./assets/seattle-870282_1920.jpg");*/
+  /*background-color: rgba(0,0,0,0.8);*/
+  /*background-position: 50% 0;*/
+  background-attachment: fixed; }
+
+#appVideo {
+  margin: 60px 0 0 40%; }
+
+#titleText {
+  margin: 0 auto;
+  width: 700px;
+  text-align: center;
+  font-family: Anson;
+  font-size: 8em; }
+
+.imgWrapper {
+  display: inline-block;
+  width: 200px;
+  height: 200px; }
+
+#iOS {
+  z-index: 100000;
+  position: fixed; }
+
+#mePic {
+  /*margin-left: 200px;*/
+  /*margin-top: 50px;*/
+  z-index: 100000;
+  position: fixed; }
+
+#webPic {
+  z-index: 100000;
+  /*it's not quite centered wihout margin*/
+  margin-left: 3px;
+  position: fixed; }
+
+.imgRow {
+  /*position: fixed;*/
+  display: block;
+  /*text-align: center;*/
+  width: 610px;
+  height: 500px;
+  margin: 0 auto;
+  margin-top: 10px;
+  /*border: 1px solid green;*/ }
+
+.subtitle {
+  padding-top: 10px;
+  margin: 0 auto;
+  text-align: center;
+  width: 400px;
+  height: auto; }
+
+#aboutMe {
+  padding: 10px;
+  margin-top: 40px;
+  border-radius: 10px;
+  background-color: rgba(255, 104, 1, 0.9); }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+  .imgRow {
+    display: none; }
+
+  body {
+    font-size: 2.5em;
+    width: 100%;
+    text-align: center;
+    background-image: none;
+    background-color: #ff6801; }
+
+  #titleText {
+    font-size: 2.5em;
+    width: 90%;
+    text-align: center; }
+
+  #content1 {
+    width: 102%;
+    height: auto;
+    margin: 0 auto; }
+
+  #content2 {
+    /*background-image: url("./assets/seattle-870282_1920.jpg");*/
+    /*background-color: rgba(0,0,0,0.8);*/
+    width: 100%;
+    /*background-position: 50% 0;*/
+    background-attachment: fixed; }
+
+  .subtitle {
+    padding-top: 10px;
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
+    height: auto; }
+
+  #appVideo {
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 40%; }
+
+  #aboutMe {
+    width: 100%;
+    height: auto; }
+
+  #content3 {
+    width: 102%;
+    margin: 0 auto;
+    text-align: center; } }
+@media (min-width: 480px) {
+  .imgRow {
+    display: none; }
+
+  body {
+    font-size: 2.5em;
+    width: 100%;
+    text-align: center;
+    background-image: none;
+    background-color: #ff6801; }
+
+  #titleText {
+    font-size: 2.5em;
+    width: 90%;
+    text-align: center; }
+
+  #content1 {
+    width: 102%;
+    height: auto;
+    margin: 0 auto; }
+
+  #content2 {
+    /*background-image: url("./assets/seattle-870282_1920.jpg");*/
+    /*background-color: rgba(0,0,0,0.8);*/
+    width: 100%;
+    /*background-position: 50% 0;*/
+    background-attachment: fixed; }
+
+  .subtitle {
+    padding-top: 10px;
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
+    height: auto; }
+
+  #appVideo {
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 40%; }
+
+  #aboutMe {
+    width: 100%;
+    height: auto; }
+
+  #content3 {
+    width: 102%;
+    margin: 0 auto;
+    text-align: center; } }
+
+/*# sourceMappingURL=styles.css.map */
