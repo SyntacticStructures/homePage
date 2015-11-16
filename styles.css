@@ -85,7 +85,7 @@ p {
 
 #mePic {
   /*margin-left: 200px;*/
-  margin-top: 50px;
+  /*margin-top: 50px;*/
   z-index: 100000;
   position: fixed; }
 

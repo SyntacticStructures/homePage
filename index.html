@@ -142,14 +142,15 @@
         iOSTotalPosition -= difference;
         // $('#iOS').translateX(difference);
         totalPosition -= difference;
-        transform($('#iOS'), "", 8);
-        transform($('#webPic'), "-", 8);
+        // turn the knob of second param to change dist between outer circles
+        transform($('#iOS'), "", 5);
+        transform($('#webPic'), "-", 5);
         console.log(totalPosition, "totalPosition");
 
 
         if (scroll[1] < 390) {
             $('#mePic').css("position", "fixed");
-            $('#mePic').css("top", 392);
+            $('#mePic').css("top", 442);
             if (scroll[1] >= 300 && scroll[1] < 390) {
                 console.log("we are here")
             }
