@@ -165,53 +165,5 @@ p {
     width: 102%;
     margin: 0 auto;
     text-align: center; } }
-@media only screen and (min-width: 481px) {
-  .imgRow {
-    display: none; }
-
-  body {
-    font-size: 2.5em;
-    width: 100%;
-    text-align: center;
-    background-image: none;
-    background-color: #ff6801; }
-
-  #titleText {
-    font-size: 2.5em;
-    width: 90%;
-    text-align: center; }
-
-  #content1 {
-    width: 102%;
-    height: auto;
-    margin: 0 auto; }
-
-  #content2 {
-    /*background-image: url("./assets/seattle-870282_1920.jpg");*/
-    /*background-color: rgba(0,0,0,0.8);*/
-    width: 100%;
-    /*background-position: 50% 0;*/
-    background-attachment: fixed; }
-
-  .subtitle {
-    padding-top: 10px;
-    margin: 0 auto;
-    text-align: center;
-    width: 90%;
-    height: auto; }
-
-  #appVideo {
-    margin: 0 auto;
-    margin-top: 50px;
-    width: 40%; }
-
-  #aboutMe {
-    width: 100%;
-    height: auto; }
-
-  #content3 {
-    width: 102%;
-    margin: 0 auto;
-    text-align: center; } }
 
 /*# sourceMappingURL=styles.css.map */
