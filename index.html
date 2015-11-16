@@ -1,171 +1,239 @@
-<!doctype html>
-<html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foundation</title>
-    <link rel="stylesheet" href="stylesheets/app.css" />
-    <script src="bower_components/modernizr/modernizr.js"></script>
-  </head>
-  <body>
-    <div class="row">
-      <div class="large-12 columns">
-        <h1>Welcome to Foundation</h1>
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="large-12 columns">
-        <div class="panel">
-          <h3>We&rsquo;re stoked you want to try Foundation! </h3>
-          <p>To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
-          <p>Once you've exhausted the fun in this document, you should check out:</p>
-          <div class="row">
-            <div class="large-4 medium-4 columns">
-              <p><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you need to know about using the framework.</p>
-            </div>
-            <div class="large-4 medium-4 columns">
-              <p><a href="http://zurb.com/university/code-skills">Foundation Code Skills</a><br />These online courses offer you a chance to better understand how Foundation works and how you can master it to create awesome projects.</p>
-            </div>
-            <div class="large-4 medium-4 columns">
-              <p><a href="http://foundation.zurb.com/forum">Foundation Forum</a><br />Join the Foundation community to ask a question or show off your knowlege.</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-4 medium-4 medium-push-2 columns">
-              <p><a href="http://github.com/zurb/foundation">Foundation on Github</a><br />Latest code, issue reports, feature requests and more.</p>
-            </div>
-            <div class="large-4 medium-4 medium-pull-2 columns">
-              <p><a href="https://twitter.com/ZURBfoundation">@zurbfoundation</a><br />Ping us on Twitter if you have questions. When you build something with this we'd love to see it (and send you a totally boss sticker).</p>
-            </div>        
-          </div>
-        </div>
-      </div>
-    </div>
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="./bower_components/jquery.stellar/jquery.stellar.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+</head>
+<body data-stellar-background-ratio="0.01">
+ <script type="text/javascript">
 
-    <div class="row">
-      <div class="large-8 medium-8 columns">
-        <h5>Here&rsquo;s your basic grid:</h5>
-        <!-- Grid Example -->
-
-        <div class="row">
-          <div class="large-12 columns">
-            <div class="callout panel">
-              <p><strong>This is a twelve column section in a row.</strong> Each of these includes a div.panel element so you can see where the columns are - it's not required at all for the grid.</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-6 medium-6 columns">
-            <div class="callout panel">
-              <p>Six columns</p>
-            </div>
-          </div>
-          <div class="large-6 medium-6 columns">
-            <div class="callout panel">
-              <p>Six columns</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
-            </div>
-          </div>
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
-            </div>
-          </div>
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
-            </div>
-          </div>
-        </div>
+  $(document).ready(function(){
+    function scrollToElement(elem, animationDuration, offset, completionHandler) {
+        $('html, body').animate({
+            scrollTop: $(elem).offset().top + offset
+        }, {duration: animationDuration, complete: completionHandler });
+    }
+    $('#mePic').click(function() {
+        scrollToElement('#content2', 1000, -220, null);
+    })
+    $('#iOS').click(function() {
+        scrollToElement('#content3', 1000, -110, null);
+    })
+    $('#webPic').click(function() {
+        scrollToElement('#content4', 1000, -110, function() {
+            $('#webPic').css("opacity", 1)
+        });
         
-        <hr />
+    })
+      // This is not pretty. Don't keep it!!!!
+      scrollToElement("#content1", 700, 0);
+
+  })
+
+ document.getScroll= function(){
+    if(window.pageYOffset!= undefined){
+      return [pageXOffset, pageYOffset];
+    } else {
+      var sx, sy, d= document, r= d.documentElement, b= d.body;
+      sx= r.scrollLeft || b.scrollLeft || 0;
+      sy= r.scrollTop || b.scrollTop || 0;
+      return [sx, sy];
+    }
+  }
+  $.stellar({
+    horizontalScrolling: false,
+    responsive: true,
+  });
+  var prevVal = 0;
+  var isFaded = false;
+  var iOSTotalPosition = 392;
+  var totalPosition = 0;
+  var webPicTotalTransformation = 0;
+  var iOSPicTotalTransformation = 0;
+  var opacity = 1;
+    $(document).on("scroll",function() {
+        // transform: 'translateY(300px) rotateZ(120deg)',
+        // MozTransform: 'translateY(300px) rotateZ(120deg)',
+        // WebkitTransform: 'translateY(300px) rotateZ(120deg)',
+        // msTransform: 'translateY(300px) rotateZ(120deg)'
+        var scroll = document.getScroll();
+        console.log(prevVal-scroll[1], "difference");
+        var difference = prevVal-scroll[1];
+        // this will move any element in one of 4 2d directions.
+        var transform = function(elem, direction, speed) {
+            var diff = webPicTotalTransformation - difference;
+            if (totalPosition < 300) {
+                changeOpacity($('#webPic'), 300, 600, 1000);
+                webPicTotalTransformation = 0;
+                iOSPicTotalTransformation = 0;
+                elem.css("transform", "translateX(0px)");
+            } else if (totalPosition >= 300 && totalPosition <= 790) {
+                changeOpacity($('#webPic'), 300, 600, 1000);
                 
-        <h5>We bet you&rsquo;ll need a form somewhere:</h5>
-        <form>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-12.columns" />
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-4 medium-4 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-4.columns" />
-            </div>
-            <div class="large-4 medium-4 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-4.columns" />
-            </div>
-            <div class="large-4 medium-4 columns">
-              <div class="row collapse">
-                <label>Input Label</label>
-                <div class="small-9 columns">
-                  <input type="text" placeholder="small-9.columns" />
-                </div>
-                <div class="small-3 columns">
-                  <span class="postfix">.com</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Select Box</label>
-              <select>
-                <option value="husker">Husker</option>
-                <option value="starbuck">Starbuck</option>
-                <option value="hotdog">Hot Dog</option>
-                <option value="apollo">Apollo</option>
-              </select>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-6 medium-6 columns">
-              <label>Choose Your Favorite</label>
-              <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Radio 1</label>
-              <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Radio 2</label>
-            </div>
-            <div class="large-6 medium-6 columns">
-              <label>Check these out</label>
-              <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-              <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Textarea Label</label>
-              <textarea placeholder="small-12.columns"></textarea>
-            </div>
-          </div>
-        </form>
-      </div>     
+                if (direction == "-") {
+                    elem.css("transform", "translateX(" + direction + webPicTotalTransformation/speed + "px)");
+                } else if (direction == "") {
+                    elem.css("transform", "translateX(" + direction + webPicTotalTransformation/speed + "px)");
+                }
+                webPicTotalTransformation -= difference;
+                iOSPicTotalTransformation -= difference;
+            } else if (totalPosition > 790 && totalPosition <= 1126) {
+                // changeOpacity($('#webPic'), 300, 1000, 1000);
+                console.log("webPicTotalTransformation", webPicTotalTransformation)
+                 if (direction == "") {
+                    // it keeps going into the negative, so we will catch it
+                    if (webPicTotalTransformation/speed <= 0) {
+                        webPicTotalTransformation = 0;
+                        elem.css("transform", "translateX(0px)");
+                    } else {
+                        elem.css("transform", "translateX(" + webPicTotalTransformation/speed + "px)");
+                        webPicTotalTransformation += difference;
+                    }
+                } else {
+                    // quick fix
+                        elem.css("transform", "translateX(-" + iOSPicTotalTransformation/speed + "px)");
+                        iOSPicTotalTransformation += difference;
 
-      <div class="large-4 medium-4 columns">
-        <h5>Try one of these buttons:</h5>
-        <p><a href="#" class="small button">Simple Button</a><br/>
-        <a href="#" class="small radius button">Radius Button</a><br/>
-        <a href="#" class="small round button">Round Button</a><br/>            
-        <a href="#" class="medium success button">Success Btn</a><br/>
-        <a href="#" class="medium alert button">Alert Btn</a><br/>
-        <a href="#" class="medium secondary button">Secondary Btn</a></p>           
-        <div class="panel">
-          <h5>So many components, girl!</h5>
-          <p>A whole kitchen sink of goodies comes with Foundation. Check out the docs to see them all, along with details on making them your own.</p>
-          <a href="http://foundation.zurb.com/docs/" class="small button">Go to Foundation Docs</a>          
+                    
+                }
+            } else if (totalPosition >= 1590 && totalPosition <= 1926) {
+                // if (direction == "-"){
+                //     if (iOSPicTotalTransformation/speed >= 1000) {
+                //         iOSPicTotalTransformation = 1000;
+                //         elem.css("transform", "translateX(0px)");
+                //     } else {
+                //         elem.css("transform", "translateX(-" + (iOSPicTotalTransformation)/speed + "px)");
+                //         console.log($("#webPic").css("transform"), "ios transform");
+                //         iOSPicTotalTransformation += difference;
+                //     }
+                // }
+            }
+        }
+        if(scroll[1] >= 1590 && scroll[1]) {
+            var xx = parseFloat($('#webPic').css("opacity")) + .008
+            console.log("lksjgoioihgroihgoirgh", xx);
+            $('#webPic').css("opacity", xx)
+        } else if (scroll[1] < 1590 && scroll[1] > 1126) {
+            var xx = parseFloat($('#webPic').css("opacity")) - .008
+            console.log("lksjgoioihgroihgoirgh", xx);
+            $('#webPic').css("opacity", xx)
+        }
+
+        var changeOpacity = function(elem, boundOne, boundTwo, rateOfChange) {
+            // base this directly off total position, since it seems to be the only accurate measure we can get
+            var newOpacity = 1
+            if (totalPosition < boundOne) {
+                newOpacity = 1
+                // if current scroll is in bounds
+            } else if (totalPosition >= boundOne && totalPosition < boundTwo) {
+                // decrement opacity
+                newOpacity = 1 - totalPosition/rateOfChange;
+                // if scroll is past the second bound
+            } else if (totalPosition >= boundTwo) {
+                // increment opacity
+                newOpacity = 0 + totalPosition/(rateOfChange + boundOne);
+            }
+            elem.css("opacity", newOpacity)
+        }
+        
+        changeOpacity($('#iOS'), 300, 600, 1000);
+        iOSTotalPosition -= difference;
+        // $('#iOS').translateX(difference);
+        totalPosition -= difference;
+        transform($('#iOS'), "", 8);
+        transform($('#webPic'), "-", 8);
+        console.log(totalPosition, "totalPosition");
+
+
+        if (scroll[1] < 390) {
+            $('#mePic').css("position", "fixed");
+            $('#mePic').css("top", 392);
+            if (scroll[1] >= 300 && scroll[1] < 390) {
+                console.log("we are here")
+            }
+        // if we hit the first section, stop the mepic
+        } else if (scroll[1] >= 390) {
+
+            $('#mePic').css("position", "absolute");
+            $('#mePic').css("top", 782);
+            // $('#webPic').css("left", 126);
+            // $("#webPic").fadeOut();
+            // $("#iOS").fadeOut();
+            if (scroll[1] >= 1126) {
+                $('#iOS').css("position", "absolute");
+                $('#iOS').css("top", 1518);
+                console.log($('#iOS').css("transform"), "iOS transform")
+            } else {
+                $('#iOS').css("position", "fixed");
+                $('#iOS').css("top", 442);
+            }
+
+           if (scroll[1] >= 1926) {
+                $('#webPic').css("position", "absolute");
+                $('#webPic').css("top", 2318);
+                console.log("WHY ARE WE STIL")
+                $('#webPic').css("transform", "translateX(-96.875px)");
+                // iOSPicTotalTransformation = (-83.75 * 8)
+
+            } else {
+                $('#webPic').css("position", "fixed");
+                $('#webPic').css("top", 442);
+            }
+
+        } else if (totalPosition > 391) {
+            // console.log("three ninety onw")
+            // $("#webPic").fadeIn();
+            // $("#iOS").fadeIn();
+            // $('#mePic').css("position", "fixed");
+            // $('#mePic').css("top", 392);
+            // $('#webPic').css("left", 126);
+        }
+        prevVal = scroll[1];
+        console.log(scroll[1], "total scroll");
+    
+
+  })
+  </script>
+
+
+<div class="content" id="content1" data-stellar-background-ratio="3">
+  <h1 id="titleText">Taylor Lea</h1>
+  <div class="subtitle">
+    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+  </div>
+  <div class= "imgRow">
+        <div class="imgWrapper">
+            <img id="webPic" src="./assets/web.png" width="200" height="auto">
         </div>
-      </div>
-    </div>
+        <div class="imgWrapper">
+            <img id="mePic" src="./assets/mePic.png" width="200" height="auto">
+        </div>
+        <div class="imgWrapper">
+            <img id="iOS" src="./assets/ios.png" width="200" height="auto">
+        </div>
+  </div>
+  <h2 id="subTitle">poop</h2>
+</div>
+<div class="content" id="content2" data-stellar-background-ratio=".01">
+    <video id="appVideo" width = "20%" height="auto" loop autoplay>
+      <source src="./assets/noRefresh.mp4">
+    </video>
+</div>
+<div class="content" id="content3" data-stellar-background-ratio=".1">
+    <video id="appVideo" width = "20%" height="auto" loop autoplay>
+      <source src="./assets/noRefresh.mp4">
+    </video>
+</div>
+<div class="content" id="content4" data-stellar-background-ratio="0.3">
+</div>
 
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/foundation/js/foundation.min.js"></script>
-    <script src="js/app.js"></script>
-  </body>
+</div>
+</body>
 </html>
