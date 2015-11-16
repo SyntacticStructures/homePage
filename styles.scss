@@ -171,7 +171,7 @@
     @media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
     	@include lilGuys();
 	}
-    @media (min-width:480px) {
+    @media (min-width:481px) {
       @include lilGuys()
     }
 
