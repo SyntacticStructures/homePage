@@ -132,7 +132,8 @@ p {
     text-align: center; }
 
   #content1 {
-    width: 100%; }
+    width: 100%;
+    height: auto; }
 
   #content2 {
     /*background-image: url("./assets/seattle-870282_1920.jpg");*/
@@ -152,6 +153,10 @@ p {
     margin: 0 auto;
     margin-top: 50px;
     /*display: block;*/ }
+
+  #aboutMe {
+    width: 100%;
+    height: auto; }
 
   #content3 {
     width: 100%;
