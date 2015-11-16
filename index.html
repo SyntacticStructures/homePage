@@ -2,11 +2,10 @@
 <html>
 <head>
   <title></title>
-  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />
+  <!-- <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" /> -->
 
   <script src="./bower_components/jquery/dist/jquery.min.js"></script>
   <script src="./bower_components/jquery.stellar/jquery.stellar.min.js"></script>
-  <script scr ="./scrollability.js"></script>
   <link rel="stylesheet" type="text/css" href="./styles.css">
 </head>
 <body data-stellar-background-ratio="0.01">
@@ -45,10 +44,10 @@
       return [sx, sy];
     }
   }
-  // $.stellar({
-  //   horizontalScrolling: false,
-  //   responsive: true,
-  // });
+  $.stellar({
+    horizontalScrolling: false,
+    responsive: true,
+  });
   var prevVal = 0;
   var isFaded = false;
   var iOSTotalPosition = 392;

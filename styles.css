@@ -68,7 +68,7 @@ p {
 
 #titleText {
   margin: 0 auto;
-  /*width: 700px;*/
+  width: 700px;
   text-align: center;
   font-family: Anson;
   font-size: 8em; }
@@ -108,7 +108,7 @@ p {
   padding-top: 10px;
   margin: 0 auto;
   text-align: center;
-  /*width: 400px;*/
+  width: 400px;
   height: auto; }
 
 #aboutMe {
@@ -117,7 +117,7 @@ p {
   border-radius: 10px;
   background-color: rgba(255, 104, 1, 0.9); }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   img {
     display: none; }
 
