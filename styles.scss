@@ -71,7 +71,7 @@
     }
     #titleText {
     	margin: 0 auto;
-    	width: 700px;
+    	/*width: 700px;*/
     	text-align: center;
       	font-family: Anson;
       	font-size: 8em;
@@ -111,7 +111,7 @@
     	padding-top: 10px;
     	margin: 0 auto;
     	text-align: center;
-    	width: 400px;
+    	/*width: 400px;*/
     	height: auto;
     }
     #aboutMe {
@@ -120,9 +120,32 @@
     	border-radius: 10px;
   		background-color: rgba(255,104,1,0.9);
     }
-    @media only screen and (max-width: 100px) {
+    @media only screen and (max-width: 768px) {
 
-   		body { font-size: 1em; }
+   		img { display: none; }
+   		body {
+   			font-size: 1em;
+   			width: 100%;
+   			text-align: center;
+   		}
+   		#titleText {
+   			font-size: 2em;
+   			width: 200px;
+   			text-align: center;
+   		}
+   		#content1 {
+   			height: 500px;
+   		}
+   		#appVideo {
+   			margin: 0 auto;
+   			margin-top: 50px;
+      		/*display: block;*/
+    	}
+    	#content3 {
+    		width: 100%;
+    		margin: 0 auto;
+    		text-align: center;
+    	}
 
 	}
 
