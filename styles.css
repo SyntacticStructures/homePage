@@ -165,7 +165,7 @@ p {
     width: 102%;
     margin: 0 auto;
     text-align: center; } }
-@media only screen and (min-width: 481px) {
+@media only screen and (min-width: 480px) {
   body {
     display: none; } }
 

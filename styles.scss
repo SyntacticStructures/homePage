@@ -171,7 +171,7 @@
     @media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
     	@include lilGuys();
 	}
-    @media only screen and (min-width:481px) {
+    @media only screen and (min-width:480px) {
       body {
         display: none;
       }
