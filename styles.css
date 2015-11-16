@@ -122,13 +122,13 @@ p {
     display: none; }
 
   body {
-    font-size: 1em;
+    font-size: 2.5em;
     width: 100%;
     text-align: center; }
 
   #titleText {
-    font-size: 2em;
-    width: 200px;
+    font-size: 2.5em;
+    width: 90%;
     text-align: center; }
 
   #content1 {
