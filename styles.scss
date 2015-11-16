@@ -136,6 +136,20 @@
    		#content1 {
    			height: 500px;
    		}
+   		#content2 {
+	        /*background-image: url("./assets/seattle-870282_1920.jpg");*/
+	        /*background-color: rgba(0,0,0,0.8);*/
+	        height: 620px;
+	        /*background-position: 50% 0;*/
+	        background-attachment: fixed;
+    	}
+    	.subtitle {
+	    	padding-top: 10px;
+	    	margin: 0 auto;
+	    	text-align: center;
+	    	width: 400px;
+	    	height: auto;
+    	}
    		#appVideo {
    			margin: 0 auto;
    			margin-top: 50px;

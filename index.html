@@ -10,8 +10,30 @@
 </head>
 <body data-stellar-background-ratio="0.01">
  <script type="text/javascript">
-
+ var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
   $(document).ready(function(){
+    if( !isMobile.any() ){
+        $(window).stellar();
+    }
     function scrollToElement(elem, animationDuration, offset, completionHandler) {
         $('html, body').animate({
             scrollTop: $(elem).offset().top + offset
@@ -44,10 +66,6 @@
       return [sx, sy];
     }
   }
-  $.stellar({
-    horizontalScrolling: false,
-    responsive: true,
-  });
   var prevVal = 0;
   var isFaded = false;
   var iOSTotalPosition = 392;
@@ -178,7 +196,7 @@
 
 
 <div class="content" id="content1" data-stellar-background-ratio="3">
-  <h1 id="titleText">Taylor Leg</h1>
+  <h1 id="titleText">Taylor Len</h1>
   <div class="subtitle">
     <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
