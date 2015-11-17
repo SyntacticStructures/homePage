@@ -35,7 +35,7 @@
         $(window).stellar();
     }
     // $('#iOS').hide();
-    // $('#webPic').hide()
+    $('#webPic').hide()
     function scrollToElement(elem, animationDuration, offset, completionHandler) {
         $('html, body').animate({
             scrollTop: $(elem).offset().top + offset
@@ -81,6 +81,9 @@
         // WebkitTransform: 'translateY(300px) rotateZ(120deg)',
         // msTransform: 'translateY(300px) rotateZ(120deg)'
         var scroll = document.getScroll();
+        if (scroll[1] > 1580) {
+            $("#appVideo")[0].play();
+        }
         console.log(prevVal-scroll[1], "difference");
         var difference = prevVal-scroll[1];
         // this will move any element in one of 4 2d directions.
@@ -121,13 +124,12 @@
             } 
         }
         if(scroll[1] >= 1590 && scroll[1]) {
-            var xx = parseFloat($('#webPic').css("opacity")) + .0095555555
-            console.log("lksjgoioihgroihgoirgh", xx);
-            $('#webPic').css("opacity", xx)
+            var newOpacity = parseFloat($('#webPic').css("opacity")) + .0095555555
+            $('#webPic').css("opacity", newOpacity)
         } else if (scroll[1] < 1590 && scroll[1] > 1126) {
-            var xx = parseFloat($('#webPic').css("opacity")) - .0095
-            console.log("lksjgoioihgroihgoirgh", xx);
-            $('#webPic').css("opacity", xx)
+            var currentOpacity = parseFloat($('#webPic').css("opacity")) - .0095
+            console.log("lksjgoioihgroihgoirgh", currentOpacity);
+            $('#webPic').css("opacity", newOpacity)
         }
 
         var changeOpacity = function(elem, boundOne, boundTwo, rateOfChange) {
@@ -156,7 +158,7 @@
         transform($('#webPic'), "-", 4);
         console.log(totalPosition, "totalPosition");
 
-
+        // logic for 3 images moving
         if (scroll[1] < 390) {
             $('#mePic').css("position", "fixed");
             $('#mePic').css("top", 442);
@@ -226,13 +228,11 @@
 </div>
 <div class="content" id="content3" data-stellar-background-ratio=".1">
     <div class="vidBox">
-        <h3 class="vidTitle">meet bussle</h3>
-        <video id="appVideo" width = "20%" height="auto" loop autoplay>
-        <source src="./assets/noRefresh.mp4">
+        <h3 class="vidTitle"><span id="meet">meet:</span> bussle<img id="busIcon" src="./assets/icon.png" width="50"></h3>
+        <video id="appVideo" width = "20%" height="auto" loop>
+        <source src="./assets/preview1.mp4">
         </video>
-        <video id="appVideo" width = "20%" height="auto" loop autoplay>
-        <source src="./assets/noRefresh.mp4">
-        </video>
+
         <div id="sideText">
             <ul>
                 <h3>Seattle's newest transportation tool</h3>
@@ -244,6 +244,21 @@
     </div>
 </div>
 <div class="content" id="content4" data-stellar-background-ratio="0.3">
+    <div class="vidBox">
+        <h3 class="vidTitle"><span id="meet">meet:</span> bussle<img id="busIcon" src="./assets/icon.png" width="50"></h3>
+        <video id="appVideo" width = "20%" height="auto" loop>
+        <source src="./assets/preview1.mp4">
+        </video>
+
+        <div id="sideText">
+            <ul>
+                <h3>Seattle's newest transportation tool</h3>
+                <li>you already know where the stop is</li>
+                <li>bussle removes the clutter so you can find your bus FAST</li>
+                <li>bussle will always be $0, Ad-free, and we don't want your personal data</li>
+            <ul>
+        </div>
+    </div>
 </div>
 
 </div>
