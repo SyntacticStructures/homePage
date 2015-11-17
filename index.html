@@ -30,7 +30,8 @@
         return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
     }
 };
-  $(document).ready(function(){
+
+$(document).ready(function(){
     if( !isMobile.any() ){
             console.log("stellar")
         $.stellar({
@@ -38,10 +39,7 @@
            verticalScrolling: true
 
         });
-        // $('body').hide()
     }
-    // $('#iOS').hide();
-    // $('#webPic').hide()
     function scrollToElement(elem, animationDuration, offset, completionHandler) {
         $('html, body').animate({
             scrollTop: $(elem).offset().top + offset
@@ -61,9 +59,12 @@
     })
       // This is not pretty. Don't keep it!!!!
       scrollToElement("#content1", 700, 0);
-
+    $('#busIcon').hover(function(){
+        $('#busIcon').css("opacity", 1);
+    }, function() {
+        $('#busIcon').css("opacity", 0.5)
+    })
   })
-
  document.getScroll= function(){
     if(window.pageYOffset!= undefined){
       return [pageXOffset, pageYOffset];
@@ -229,12 +230,12 @@
 <div class="content" id="content2" data-stellar-background-ratio=".01">
     <div class="subtitle" id="aboutMe">
         <h3>About Me</h3><br>
-        <p> I write and design applications for iOS.<br><br>I also make full-stack web applications with Node, PHP, and Rails </p>
+        <p> Full-stack web developer writing and designing iOS applications</p>
     </div>
 </div>
 <div class="content" id="content3" data-stellar-background-ratio=".1">
     <div class="vidBox">
-        <h3 class="vidTitle"><span id="meet">meet:</span> bussle<img id="busIcon" src="./assets/icon.png" width="50"></h3>
+        <h3 class="vidTitle"><span id="meet">meet:</span> busola<img id="busIcon" src="./assets/icon.png" width="50"></h3>
         <video id="appVideo" width = "20%" height="auto" loop>
         <source src="./assets/preview1.mp4">
         </video>
@@ -243,8 +244,9 @@
             <ul>
                 <h3>Seattle's newest transportation tool</h3>
                 <li>you already know where the stop is</li>
-                <li>bussle removes the clutter so you can find your bus FAST</li>
-                <li>bussle will always be $0, Ad-free, and we don't want your personal data</li>
+                <li>busola removes the clutter so you can catch your ride</li>
+                <li>busola will always be $0, Ad-free, and I don't want your personal data</li>
+                <li>real-time data from <a href="https://onebusaway.org/">OneBusAway</a></li>
             <ul>
         </div>
     </div>
