@@ -73,6 +73,9 @@ p {
   display: inline-block;
   width: 20%; }
 
+ul {
+  text-align: left; }
+
 li {
   padding-top: 40px; }
 
