@@ -50,7 +50,7 @@ p {
   /*        width: 90%;
           margin: 0 auto;
           height: 1000px;*/
-  height: 700px; }
+  height: 800px; }
 
 #content2 {
   /*background-color: rgba(0,0,0,0.8);*/
@@ -74,6 +74,7 @@ li {
 
 .vidTitle {
   width: 25%;
+  padding-top: 60px;
   margin: 0 auto;
   padding-right: 33%;
   padding-bottom: 50px;
@@ -91,7 +92,6 @@ li {
 .vidBox {
   text-align: center;
   display: block;
-  padding-top: 60px;
   width: 100%;
   margin: 0 auto;
   margin-left: 15%; }
