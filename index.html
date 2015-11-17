@@ -8,7 +8,7 @@
   <script src="./bower_components/jquery.stellar/jquery.stellar.min.js"></script>
   <link rel="stylesheet" type="text/css" href="./styles.css">
 </head>
-<body data-stellar-background-ratio="0.01">
+<body data-stellar-background-ratio="0.05">
  <script type="text/javascript">
  var isMobile = {
     Android: function() {
@@ -32,7 +32,13 @@
 };
   $(document).ready(function(){
     if( !isMobile.any() ){
-        $(window).stellar();
+            console.log("stellar")
+        $.stellar({
+           horizontalScrolling: false,
+           verticalScrolling: true
+
+        });
+        // $('body').hide()
     }
     // $('#iOS').hide();
     // $('#webPic').hide()

@@ -6,14 +6,18 @@
 @font-face {
   font-family: "Anson";
   src: url("./assets/Anson-Regular.otf") format("opentype"); }
+html {
+  max-width: 100%;
+  overflow-x: hidden; }
+
 body {
   font-size: 18px;
+  max-width: 100%;
   font-family: 'Montserrat', sans-serif;
   font-weight: lighter;
   color: white;
   /*text-shadow: 0 1px 0 black, 0 0 5px black;*/
   background-attachment: fixed;
-  /*background-position: 0 200px;*/
   background-image: url("./assets/seattle-870282_1920.jpg");
   background-repeat: no-repeat;
   /*height: 10000px;*/
@@ -33,7 +37,7 @@ p {
   font-size: 3em; }
 
 .content {
-  /*background-position: 50% 0;*/
+  background-position: 50% 0;
   background-repeat: no-repeat;
   height: 500px;
   position: relative; }
@@ -191,7 +195,7 @@ li {
     /*background-image: url("./assets/seattle-870282_1920.jpg");*/
     /*background-color: rgba(0,0,0,0.8);*/
     width: 100%;
-    /*background-position: 50% 0;*/
+    /*background-position: 50% 0*/
     background-attachment: fixed; }
 
   .subtitle {
