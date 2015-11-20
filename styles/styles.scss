@@ -3,6 +3,13 @@
         display: block;
         width: 100%;
         margin: 0 auto;
+    }
+    @mixin arrow() {
+        color: white;
+        cursor: pointer;
+        display: inline-block;
+        margin-bottom: 50%;
+        vertical-align: middle;
     }    
 
 
@@ -25,11 +32,10 @@
         font-family: 'Montserrat', sans-serif;
         font-weight: lighter;
 	    color: white;
-	    /*text-shadow: 0 1px 0 black, 0 0 5px black;*/
+        height: auto;
 		background-attachment: fixed;
 	    background-image: url("../assets/seattle-870282_1920.jpg"); 
 	    background-repeat: no-repeat;
-	    /*height: 10000px;*/
 	    position: relative;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
@@ -57,43 +63,39 @@
     }
     #content1 {
         background-image: url("http://www.solidbackgrounds.com/images/2880x1800/2880x1800-safety-orange-blaze-orange-solid-color-background.jpg");
-        /*background-position: 50% 0;*/
         background-attachment: fixed;
         height: 1000px;
     }
     #content3 {
         background-color: rgba(0,0,0,0.5);
         background-attachment: fixed;
-/*        width: 90%;
-        margin: 0 auto;
-        height: 1000px;*/
         height: 800px;
     }
+    #content5{
+        height: 300px;
+        background-color: rgb(255,104,1);
+        text-align: center;
+    }
+    .contact {
+        display: inline-block;
+        margin-top: 10%;
+    }
     #next {
-        cursor: pointer;
-        padding-top: 10px;
-        display: block;
+        @include arrow();
+        margin-top: 6.5%;
         margin-left: 95%;
     }
     #prev {
-        color: white;
-        cursor: pointer;
-        // display: inline;
-        display: inline-block;
-        float: left;
-        margin-top: 25%;
+        @include arrow();
+        height: 100%;
         margin-right: 1%;
     }
     #content2 {
-        // background-image: url("./assets/seattle-870282_1920.jpg");
-        /*background-color: rgba(0,0,0,0.8);*/
         height: 620px;
-        /*background-position: 50% 0;*/
         background-attachment: fixed;
     }
     #content4 {
         background-color: rgba(0,0,0,0.8);
-        // background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/d5/HohRainForest.JPG");
         background-size: 1800px;
         background-attachment: fixed;
         height: 700px;
@@ -117,9 +119,7 @@
     }
     #secondProjectMovie {
         width: 95%;
-        // margin-left: 5%;
-        display: inline-block;
-        // position: absolute;
+        display: inline;
     }
     .unslider-arrow {
         color: transparent;
@@ -207,18 +207,12 @@
         cursor: pointer; cursor: hand;
     }
     #mePic{
-    	/*margin-left: 200px;*/
-    	/*margin-top: 50px;*/
-        // margin-top: 20px;
     	z-index: 100000;
     	position: fixed;
         cursor: pointer; cursor: hand;
     }
     #webPic{
-        // width: 100;
     	z-index: 100000;
-    	/*it's not quite centered wihout margin*/
-    	// margin-left: 3px;
     	position: fixed;
         cursor: pointer; cursor: hand;
     }
@@ -231,15 +225,12 @@
         margin-left: 7px;
     }
     .imgRow {
-    	/*position: fixed;*/
     	display: block;
     	text-align: left;
     	width: 620px;
     	height: 500px;
     	margin: 0 auto;
         vertical-align: baseline;
-    	// margin-top: 10px;
-    	/*border: 1px solid green;*/
     }
     #meet {
         font-family: arial;
@@ -288,10 +279,7 @@
             margin: 0 auto;
         }
         #content2 {
-            /*background-image: url("./assets/seattle-870282_1920.jpg");*/
-            /*background-color: rgba(0,0,0,0.8);*/
             width: 100%;
-            /*background-position: 50% 0*/
             background-attachment: fixed;
         }
         .subtitle {

@@ -27,20 +27,52 @@ $(document).ready(function(){
 
         });
     }
+    $(".contact").hover(function(){
+        console.log("hovering")
+        $(this).css("color","lightgrey")
+    }, function(){
+        $(this).css("color", "white")
+    })
+    var leftRight = true
+    $(document).keydown(function(e) {
+    switch(e.which) {
+        case 37:
+        if (leftRight == false) {
+            $('#prev').click();
+            leftRight = true;
+        }
+        break;
+
+    
+        case 39: // right
+        if (leftRight == true) {
+            $('#next').click();
+            leftRight = false;
+        }
+        break;
+
+
+        default: return; // exit this handler for other keys
+    }
+    e.preventDefault(); // prevent the default action (scroll / move caret)
+});
     $('.banner').unslider({
         // autoplay: true
+        keys:false
     });
     $('#next').on("click", function(){
         $('ol li:nth-child(2)').click()
         $('#next').fadeOut()
         $('#prev').fadeOut()
         $('#prev').fadeIn()
+        leftRight = false;
     })
     $('#prev').on("click", function(){
         $('ol li:nth-child(1)').click()
         $('#prev').fadeOut()
         $('#next').fadeOut()
-        $('#next').fadeIn();
+        $('#next').fadeIn()
+        leftRight = true;
     })
     function scrollToElement(elem, animationDuration, offset, completionHandler) {
         $('html, body').animate({
