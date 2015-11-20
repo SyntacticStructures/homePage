@@ -1,0 +1,307 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400);
+* {
+  margin: 0;
+  padding: 0; }
+
+@font-face {
+  font-family: "Anson";
+  src: url("../assets/Anson-Regular.otf") format("opentype"); }
+html {
+  max-width: 100%;
+  overflow-x: hidden; }
+
+body {
+  font-size: 1.2em;
+  max-width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+  color: white;
+  /*text-shadow: 0 1px 0 black, 0 0 5px black;*/
+  background-attachment: fixed;
+  background-image: url("../assets/seattle-870282_1920.jpg");
+  background-repeat: no-repeat;
+  /*height: 10000px;*/
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+p {
+  padding: 0 0.5em;
+  margin: 0; }
+
+#subTitle {
+  margin: 0 auto;
+  width: 200px;
+  margin-top: 100px;
+  display: none;
+  text-align: center;
+  font-family: Anson;
+  font-size: 3em; }
+
+.content {
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  height: 500px;
+  position: relative; }
+
+#content1 {
+  background-image: url("http://www.solidbackgrounds.com/images/2880x1800/2880x1800-safety-orange-blaze-orange-solid-color-background.jpg");
+  /*background-position: 50% 0;*/
+  background-attachment: fixed;
+  height: 1000px; }
+
+#content3 {
+  background-color: rgba(0, 0, 0, 0.5);
+  background-attachment: fixed;
+  /*        width: 90%;
+          margin: 0 auto;
+          height: 1000px;*/
+  height: 800px; }
+
+#next {
+  cursor: pointer;
+  padding-top: 10px;
+  display: block;
+  margin-left: 95%; }
+
+#prev {
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  float: left;
+  margin-top: 25%;
+  margin-right: 1%; }
+
+#content2 {
+  /*background-color: rgba(0,0,0,0.8);*/
+  height: 620px;
+  /*background-position: 50% 0;*/
+  background-attachment: fixed; }
+
+#content4 {
+  background-color: rgba(0, 0, 0, 0.8);
+  background-size: 1800px;
+  background-attachment: fixed;
+  height: 700px; }
+
+#appVideo {
+  margin: 0 auto;
+  display: inline-block;
+  width: 20%; }
+
+.sliderImage {
+  width: 100%;
+  margin: 0 auto;
+  height: auto; }
+
+.secondVidBox {
+  width: 63%;
+  height: auto;
+  display: inline-block;
+  margin-top: 4%;
+  margin-left: 3%; }
+
+#secondProjectMovie {
+  width: 95%;
+  display: inline-block; }
+
+.unslider-arrow {
+  color: transparent; }
+
+.unslider-active {
+  color: transparent; }
+
+li {
+  color: transparent; }
+
+.displayedLi {
+  color: white;
+  text-align: left;
+  padding-top: 40px; }
+
+a {
+  text-decoration: none;
+  color: white; }
+
+.vidTitle {
+  width: 25%;
+  padding-top: 60px;
+  margin: 0 auto;
+  padding-right: 33%;
+  padding-bottom: 50px;
+  font-family: Anson;
+  font-size: 3.5em;
+  text-align: center; }
+
+.webTitle {
+  padding-top: 60px;
+  font-size: 2.1em;
+  font-family: arial;
+  font-weight: lighter;
+  text-align: center; }
+
+.sideTextPhp {
+  width: 30%;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 40px;
+  color: white; }
+
+.sideTextPhp p {
+  padding-top: 40px; }
+
+.sideText {
+  width: 30%;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 100px;
+  color: white;
+  text-align: left; }
+
+.vidBox {
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  margin-left: 15%; }
+
+.webBox {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin: 0 auto; }
+
+.listPar {
+  list-style: disc; }
+
+#titleText {
+  margin: 0 auto;
+  width: 700px;
+  text-align: center;
+  font-family: Anson;
+  font-size: 8em; }
+
+.imgWrapper {
+  display: inline-block;
+  width: 150px;
+  height: auto;
+  text-align: center; }
+
+#iOS {
+  z-index: 100000;
+  position: fixed;
+  cursor: pointer;
+  cursor: hand; }
+
+#mePic {
+  /*margin-left: 200px;*/
+  /*margin-top: 50px;*/
+  z-index: 100000;
+  position: fixed;
+  cursor: pointer;
+  cursor: hand; }
+
+#webPic {
+  z-index: 100000;
+  /*it's not quite centered wihout margin*/
+  position: fixed;
+  cursor: pointer;
+  cursor: hand; }
+
+#phpProjectMovie {
+  display: inline-block;
+  margin-top: 4%;
+  margin-left: 3%; }
+
+.sideTextPhp h3 {
+  margin-left: 7px; }
+
+.imgRow {
+  /*position: fixed;*/
+  display: block;
+  text-align: left;
+  width: 620px;
+  height: 500px;
+  margin: 0 auto;
+  vertical-align: baseline;
+  /*border: 1px solid green;*/ }
+
+#meet {
+  font-family: arial;
+  font-weight: lighter;
+  font-size: .7em; }
+
+.subtitle {
+  padding-top: 10px;
+  margin: 0 auto;
+  text-align: center;
+  width: 400px;
+  height: 220px; }
+
+#aboutMe {
+  padding: 20px 10px 20px 10px;
+  margin-top: 40px;
+  border-radius: 6px;
+  background-color: rgba(255, 104, 1, 0.99);
+  height: auto; }
+
+#busIcon {
+  border-radius: 10px;
+  opacity: 0.5;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: 20px; }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+  .imgRow {
+    display: none; }
+
+  body {
+    font-size: 2.5em;
+    width: 100%;
+    text-align: center;
+    background-image: none;
+    background-color: #ff6801; }
+
+  #titleText {
+    font-size: 2.5em;
+    width: 90%;
+    text-align: center; }
+
+  #content1 {
+    width: 102%;
+    height: auto;
+    margin: 0 auto; }
+
+  #content2 {
+    /*background-image: url("./assets/seattle-870282_1920.jpg");*/
+    /*background-color: rgba(0,0,0,0.8);*/
+    width: 100%;
+    /*background-position: 50% 0*/
+    background-attachment: fixed; }
+
+  .subtitle {
+    padding-top: 10px;
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
+    height: auto; }
+
+  #appVideo {
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 40%; }
+
+  #aboutMe {
+    width: 100%;
+    height: auto; }
+
+  #content3 {
+    width: 102%;
+    margin: 0 auto;
+    text-align: center; } }
+
+/*# sourceMappingURL=styles.css.map */
